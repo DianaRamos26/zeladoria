@@ -1,0 +1,26 @@
+:root{--teal:#0B5563;--ink:#1F2933;--bg:#F3F6F8;--amber:#8A4B08;font-size:112.5%}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Atkinson Hyperlegible',Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+header{background:var(--teal);color:#fff;padding:1rem 1.5rem;display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between}
+h1{margin:0;font-size:1.8rem}
+nav{display:flex;gap:.5rem;flex-wrap:wrap}
+button{font:inherit;min-height:48px;padding:.5rem 1rem;border-radius:10px;border:2px solid #fff;background:transparent;color:#fff;cursor:pointer}
+button[aria-pressed=true]{background:#fff;color:var(--teal);font-weight:700}
+main{max-width:900px;margin:0 auto;padding:1.5rem}
+.resumo{display:flex;gap:1rem;flex-wrap:wrap}
+.resumo p{background:#fff;border-radius:12px;padding:.6rem 1rem;margin:0;border:2px solid #C5D0D6}
+.filtros{display:flex;gap:1rem;flex-wrap:wrap}
+.campo{display:flex;flex-direction:column;margin:.5rem 0}
+label{font-weight:700}
+input,select{font:inherit;min-height:48px;padding:.4rem .6rem;border:2px solid var(--teal);border-radius:10px;background:#fff}
+.relatos{list-style:none;padding:0;display:grid;gap:1rem}
+.card{background:#fff;border-radius:14px;padding:1rem 1.2rem;border-left:8px solid var(--teal)}
+.card h3{margin:0}.card p{margin:.3rem 0}
+.st{font-weight:700;color:var(--amber)}
+.aviso{min-height:1.6rem;font-weight:700;color:var(--teal)}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:.5rem;z-index:9}
+:focus-visible{outline:4px solid #F5B800;outline-offset:3px}
+/* Movimento calmo: só acompanha a ação do usuário */
+.card{animation:entra .4s ease both}
+@keyframes entra{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
